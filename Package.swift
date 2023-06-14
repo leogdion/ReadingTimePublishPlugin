@@ -4,23 +4,24 @@ import PackageDescription
 
 let package = Package(
     name: "ReadingTimePublishPlugin",
-    platforms: [
-        .macOS(.v12)
-    ],
+    platforms: [.macOS(.v12)],
     products: [
         .library(
             name: "ReadingTimePublishPlugin",
-            targets: ["ReadingTimePublishPlugin"]),
+            targets: ["ReadingTimePublishPlugin"]
+        ),
     ],
     dependencies: [
-        .package(name: "Publish", url: "https://github.com/johnsundell/publish.git", from: "0.7.0"),
+        .package(name: "Publish", url: "https://github.com/johnsundell/publish.git", from: "0.9.0"),
     ],
     targets: [
         .target(
             name: "ReadingTimePublishPlugin",
-            dependencies: ["Publish"]),
+            dependencies: ["Publish"]
+        ),
         .testTarget(
             name: "ReadingTimePublishPluginTests",
-            dependencies: ["ReadingTimePublishPlugin"]),
+            dependencies: ["ReadingTimePublishPlugin"]
+        ),
     ]
 )
